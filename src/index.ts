@@ -46,7 +46,7 @@ export const plugin: PluginFunction<
     config,
     documents
   );
-  let visitorResult = visit(allAst, { leave: visitor });
+  let visitorResult = visit(allAst, visitor);
 
   return {
     prepend: visitor.getImports(),
